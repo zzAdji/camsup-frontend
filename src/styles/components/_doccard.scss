@@ -1,0 +1,136 @@
+.doc-card-container {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  border: 2px solid rgb(206, 206, 206);
+  margin: 10px;
+  padding: 16px;
+  background: $white;
+  border-radius: 20px;
+  margin: 5 auto;
+  position: relative;
+  min-height: 100px;
+  max-height: 150px;
+
+  @media screen and (max-width: 590px) {
+    grid-template-columns: 1fr;
+  }
+
+  .fas.fa-spinner {
+    position: absolute;
+    top: 40%;
+    left: 49%;
+    font-size: 1.5rem;
+    color: $color-1;
+  }
+
+  .doc-card-left {
+    .doc-card-pic {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 12px;
+      box-shadow: 0 0 2px rgba(51, 51, 51, 0.342);
+    }
+  }
+
+  .doc-card-right {
+    margin: 5px 0 0 20px;
+
+    .doc-card-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 2px 0 0 4px;
+
+      p {
+        display: flex;
+        transform: translateX(6px);
+        font-family: $font-3;
+        align-items: center;
+        margin: 0;
+      }
+
+      span {
+        font-style: italic;
+        font-family: $font-1;
+      }
+    }
+
+    .doc-item {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-family: $font-2;
+      }
+    }
+
+    p {
+      margin: 3px 0 9px;
+      font-size: 1.1rem;
+    }
+
+    .button-container {
+      justify-content: flex-end;
+      display: flex;
+
+      div {
+        padding: 5px 9px;
+        margin-left: 5px;
+        background: $color-2;
+        border-radius: 50px;
+        transition: 0.1s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.07);
+        }
+
+        img {
+          height: 16px;
+          width: 16px;
+          transform: translateY(3px);
+        }
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0 4px;
+
+      img {
+        height: 22px;
+        width: 22px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      h6 {
+        font-family: $font-1;
+        color: $black;
+      }
+      h3 {
+        font-style: italic;
+        color: $color-6;
+        font-family: $font-1;
+        transform: translateX(6px);
+      }
+
+      .signet-icon,
+      .like-container {
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 1.02rem;
+          position: absolute;
+          transform: translate(29px, 2px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+nav {
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  box-shadow: 18px 1px 0px $color-2, 22px 4px 0px 0px $shadow;
+  z-index: 11;
+  top: 0;
+
+  @media screen and (max-width: 1251px) {
+    padding: 0 20px;
+  }
+
+  &::after {
+    content: '';
+    height: 45px;
+    width: 110%;
+    left: -20px;
+    top: 0;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    background: $white;
+    z-index: -8;
+  }
+
+  .nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        transform: translate(15px, 2px);
+        font-size: 1.5rem;
+        font-family: $font-3;
+        background: linear-gradient(120deg, #817400, #e69e03);
+        background-clip: text;
+        color: transparent;
+
+        @media screen and (max-width: 560px) {
+          display: none;
+        }
+      }
+      img {
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      justify-content: space-between;
+      font-size: 1.2rem;
+
+      .welcome {
+        transform: translateY(2px);
+
+        @media screen and (max-width: 590px) {
+          display: none;
+        }
+
+        h5 {
+          font-family: $font-3;
+        }
+      }
+
+      li {
+        img {
+          height: 30px;
+          width: 30px;
+          cursor: pointer;
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          height: 100%;
+        }
+
+        @media screen and (max-width: 560px) {
+          margin: 0 5px;
+        }
+
+        .active-left-nav {
+          position: relative;
+
+          img {
+            background-color: rgba(243, 168, 28, 0.425);
+          }
+
+          &::after {
+            content: '';
+            height: 40px;
+            width: 5px;
+            position: absolute;
+            background: $color-3;
+            left: -10px;
+            bottom: 8px;
+            top: -5px;
+            border-radius: 40px;
+            transform: scaleY(0);
+            animation: scale 1s ease forwards;
+
+            @keyframes scale {
+              to {
+                transform: scaleY(1);
+              }
+            }
+            @media screen and (max-width: 590px) {
+              height: 30px;
+              left: -6px;
+              top: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

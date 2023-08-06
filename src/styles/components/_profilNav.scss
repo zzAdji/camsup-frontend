@@ -1,0 +1,13 @@
+.profil-nav-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  width: 28%;
+  height: 45px;
+  border-radius: 20px;
+}
